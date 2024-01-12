@@ -1,29 +1,22 @@
-# .
+# Introduction Vue JS
 
-This template should help get you started developing with Vue 3 in Vite.
+In this project we will be using simple components and state management in Vue JS to build a simple game of 'Squash-A-Bug'.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Setup
 
 ```sh
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
+## Task 1
 
-### Compile and Minify for Production
+Header component.
 
-```sh
-npm run build
-```
+## Task 2
+
+Score component.
+
+## Task 3
+
+Bug component.
