@@ -1,5 +1,5 @@
 <template>
-  <div class="bug-container">
+  <div class="bug-container" @click="score">
     <div class="bug" :class="showing && 'showing'"></div>
     <div class="hiding-place"></div>
   </div>
@@ -10,14 +10,11 @@ import { ref } from 'vue';
 
 const showing = ref(true)
 
-// const loop = setInterval(() => {
-//   showing.value = !showing.value
-// }, interval.value)
 loop()
 
 function loop() {
-  const minDelay = 500
-  const maxDelay = 5000
+  const minDelay = 250
+  const maxDelay = 2000
 
   const interval = Math.random() * (maxDelay - minDelay) + minDelay
 
@@ -26,6 +23,9 @@ function loop() {
   setTimeout(loop, interval)
 }
 
+function score() {
+  if (showing.value) console.log('Scored!')
+}
 </script>
 
 <style scoped>

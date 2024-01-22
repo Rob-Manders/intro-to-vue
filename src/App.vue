@@ -15,7 +15,7 @@ import Header from './components/Header.vue'
 import Score from './components/Score.vue'
 import Bug from './components/Bug.vue'
 
-const numberOfBugs = 6
+const numberOfBugs = 3
 const score = 7
 </script>
 
