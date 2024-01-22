@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['score'])
+const props = defineProps({ score: Number })
 </script>
 
 <style>

@@ -5,18 +5,28 @@
     <Score :score="score" />
 
     <div class="bugs">
-      <Bug v-for="index in numberOfBugs" :key="index" />
+      <Bug
+        v-for="index in numberOfBugs"
+        :key="index"
+        @scored="updateScore"
+      />
     </div>
   </main>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import Header from './components/Header.vue'
 import Score from './components/Score.vue'
 import Bug from './components/Bug.vue'
 
 const numberOfBugs = 3
-const score = 7
+
+const score = ref(0)
+
+function updateScore() {
+  score.value += 1
+}
 </script>
 
 <style scoped>

@@ -23,8 +23,13 @@ function loop() {
   setTimeout(loop, interval)
 }
 
+const emit = defineEmits(['scored'])
+
 function score() {
-  if (showing.value) console.log('Scored!')
+  if (showing.value) {
+    showing.value = false
+    emit('scored')
+  }
 }
 </script>
 
@@ -33,6 +38,7 @@ function score() {
   --pop-up-height: -3rem;
 }
 .bug-container {
+  cursor: pointer;
   position: relative;
   display: grid;
   place-items: center;
