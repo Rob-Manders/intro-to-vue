@@ -1,14 +1,30 @@
 <template>
   <div class="bug-container">
-    <div class="bug" :class="showing && showingClass"></div>
+    <div class="bug" :class="showing && 'showing'"></div>
     <div class="hiding-place"></div>
   </div>
 </template>
 
 <script setup>
-const showingClass = "showing"
-let showing = true
+import { ref } from 'vue';
 
+const showing = ref(true)
+
+// const loop = setInterval(() => {
+//   showing.value = !showing.value
+// }, interval.value)
+loop()
+
+function loop() {
+  const minDelay = 500
+  const maxDelay = 5000
+
+  const interval = Math.random() * (maxDelay - minDelay) + minDelay
+
+  showing.value = !showing.value
+
+  setTimeout(loop, interval)
+}
 
 </script>
 
@@ -33,7 +49,7 @@ let showing = true
   background-color: antiquewhite;
   bottom: 0;
   transform: translateY(0);
-  transition: transform 250ms;
+  transition: transform 150ms;
 }
 
 .showing {
