@@ -3,7 +3,7 @@
 
   <main>
     <div class="game-container">
-      <!-- Core Board -->
+      <!-- Score Board -->
       
       <div class="bugs">
         <!-- Bugs -->
@@ -20,6 +20,7 @@
 main {
   text-align: center;
 }
+
 .game-container {
   display: flex;
   flex-direction: column;
