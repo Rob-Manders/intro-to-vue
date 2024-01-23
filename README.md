@@ -259,7 +259,7 @@ Now we need to add some bugs to your app. Got to App.vue, then import and add a 
 
 With that all set up, you should now have a working game of 'Squish-a-Bug'.
 
-## 5. COnditionals and List Rendering Challenges
+## 5. Conditionals and List Rendering Challenges
 
 If you got this far, well done! Here are a couple of challenges to take it further with a couple of other essential Vue skills.
 
