@@ -8,13 +8,13 @@
 <script setup>
 import { ref } from 'vue';
 
-const showing = ref(true)
+const showing = ref(false)
 
 loop()
 
 function loop() {
-  const minDelay = 250
-  const maxDelay = 2000
+  const minDelay = !showing.value ? 300 : 1500
+  const maxDelay = !showing.value ? 1000 : 5000
 
   const interval = Math.random() * (maxDelay - minDelay) + minDelay
 
@@ -23,6 +23,7 @@ function loop() {
   setTimeout(loop, interval)
 }
 
+// Event Emitter:
 const emit = defineEmits(['scored'])
 
 function score() {
@@ -67,7 +68,7 @@ function score() {
   width: 100%;
   height: 5rem;
   border-radius: 5px;
-  background-color: rgb(48, 94, 79);
+  background-color: #305e4f;
   bottom: 0;
 }
 </style>
