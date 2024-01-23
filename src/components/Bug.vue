@@ -1,5 +1,5 @@
 <template>
-  <div class="bug-container" @click="score">
+  <div class="bug-container">
     <div class="bug" :class="showing && 'showing'"></div>
     <div class="hiding-place"></div>
   </div>
@@ -24,14 +24,7 @@ function loop() {
 }
 
 // Event Emitter:
-const emit = defineEmits(['scored'])
 
-function score() {
-  if (showing.value) {
-    showing.value = false
-    emit('scored')
-  }
-}
 </script>
 
 <style scoped>

@@ -1,11 +1,11 @@
 <template>
   <header class="header">
-    <h1 class="title">Squish-A-Bug</h1>
-    <p class="sub-title">The ultimate bug squishing experience</p>
+    <!-- HEader Elements -->
   </header>
 </template>
 
 <style scoped>
+/* 
 .header {
   text-align: center;
   font-family: 'Gloria-Hallelujah';
@@ -22,4 +22,5 @@
   font-size: 1.25rem;
   margin: 0;
 }
+*/
 </style>

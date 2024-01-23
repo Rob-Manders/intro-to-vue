@@ -1,15 +1,16 @@
 <template>
   <div class="score-container">
-    <p class="score-header">Score</p>
-    <p class="score">{{ score }}</p>
+    <!-- Score Board Elements -->
   </div>
 </template>
 
 <script setup>
-const props = defineProps({ score: Number })
+// Define Props:
+
 </script>
 
 <style>
+/*
 .score-container {
   margin-top: 1.5rem;
   text-align: center;
@@ -26,4 +27,5 @@ const props = defineProps({ score: Number })
   color: #ebeb90;
   margin: 0.5rem;
 }
+*/
 </style>
