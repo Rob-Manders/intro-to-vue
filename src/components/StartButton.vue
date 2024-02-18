@@ -5,7 +5,6 @@
 <style scoped>
 .start-button {
   all: unset;
-  cursor: pointer;
   font-size: 1.75rem;
   background-color: #305e4f;
   padding: 0.5rem 1.25rem;

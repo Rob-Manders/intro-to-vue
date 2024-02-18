@@ -1,14 +1,24 @@
 <template>
   <div class="bug-container" @click="score">
-    <div class="bug" :class="showing && 'showing'"></div>
-    <div class="hiding-place"></div>
+    <img class="bug" :src="bugImage" :class="showing && 'showing'" />
+    <img class="hiding-place" src="../assets/images/bush.png" />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue'
+
+import bug1 from '../assets/images/bug-1.png'
+import bug2 from '../assets/images/bug-2.png'
+import bug3 from '../assets/images/bug-3.png'
 
 const showing = ref(false)
+const bugImage = computed(() => {
+  const bugs = [bug1, bug2, bug3]
+  const imageIndex = Math.floor(Math.random() * 3)
+
+  return bugs[imageIndex]
+})
 
 loop()
 
@@ -35,11 +45,7 @@ function score() {
 </script>
 
 <style scoped>
-:root {
-  --pop-up-height: -3rem;
-}
 .bug-container {
-  cursor: pointer;
   position: relative;
   display: grid;
   place-items: center;
@@ -50,17 +56,14 @@ function score() {
 
 .bug {
   position: absolute;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  background-color: antiquewhite;
-  bottom: 0;
+  height: 4.75rem;
+  bottom: 0.25rem;
   transform: translateY(0);
   transition: transform 150ms;
 }
 
 .showing {
-  transform: translateY(-3rem)
+  transform: translateY(-4rem)
 }
 
 .hiding-place {
@@ -68,7 +71,6 @@ function score() {
   width: 100%;
   height: 5rem;
   border-radius: 5px;
-  background-color: #305e4f;
   bottom: 0;
 }
 </style>
