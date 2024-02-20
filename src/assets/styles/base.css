@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  cursor: url('../images/swatter.png'), auto;
+}
+
 body {
   margin: 0;
   background-color: #081616;
   font-family: 'Rubik', serif;
   color: #ffffff;
+  height: 95vh;
 }
