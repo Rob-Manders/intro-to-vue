@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import bug1 from '../assets/images/bug-1.png'
 import bug2 from '../assets/images/bug-2.png'
